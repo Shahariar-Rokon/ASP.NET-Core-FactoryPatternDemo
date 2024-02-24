@@ -1,0 +1,14 @@
+﻿@model AnimalViewModel
+@{
+    ViewData["Title"] = "Delete";
+}
+<h2>Delete Animal</h2>
+
+<p>Are you sure you want to delete this animal?</p>
+<p>ID: @Model.Id</p>
+<p>Type: @Model.Type</p>
+
+<form method="post" action="@Url.Action("Delete", new { id = Model.Id })">
+    <button type="submit">Delete</button>
+</form>
+

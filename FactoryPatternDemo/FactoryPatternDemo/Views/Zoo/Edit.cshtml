@@ -1,0 +1,13 @@
+﻿@model AnimalViewModel
+@{
+    ViewData["Title"] = "Edit";
+}
+<h2>Edit Animal</h2>
+
+<form method="post" action="@Url.Action("Edit", new { id = Model.Id })">
+    <input type="hidden" name="Id" value="@Model.Id" />
+    <label for="type">Type:</label>
+    <input id="type" name="Type" type="text" value="@Model.Type" />
+    <button type="submit">Save</button>
+</form>
+

@@ -1,0 +1,13 @@
+﻿@model AnimalViewModel
+@{
+    ViewData["Title"] = "Create";
+}
+<h2>Create New Animal</h2>
+
+<form method="post" action="@Url.Action("Create")">
+    <label for="type">Type:</label>
+    <input id="type" name="Type" type="text" />
+    <button type="submit">Create</button>
+</form>
+
+

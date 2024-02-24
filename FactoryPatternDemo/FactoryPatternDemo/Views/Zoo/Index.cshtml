@@ -1,0 +1,28 @@
+﻿@model IEnumerable<AnimalViewModel>
+
+    <h2>Animals</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Type</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var animal in Model)
+            {
+                <tr>
+                    <td>@animal.Id</td>
+                    <td>@animal.Type</td>
+                    <td>
+                        <a href="@Url.Action("Edit", new { id = animal.Id })">Edit</a> |
+                        <a href="@Url.Action("Delete", new { id = animal.Id })">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <a href="@Url.Action("Create")">Create New Animal</a>
